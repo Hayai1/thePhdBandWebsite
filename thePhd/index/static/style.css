@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  color: white;
+  font-family: "Sabon LT Std";
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 470px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hero Image (same as before) */
+.hero-wrapper {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* Hero Image */
+.hero-wrapper {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Wrapper for Logo and Bar */
+.logo-wrapper {
+  position: fixed; /* Keeps the logo and bar at the top */
+  top: 0px; /* Adjust this for spacing from the top */
+  text-align: center;
+  z-index: 10; /* Keeps the logo and bar on top */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  width: 100%; /* Ensures the bar goes across the full width */
+  background-color: #000000;
+}
+
+/* Band Logo */
+.band-logo {
+  width: 400px; /* Resize logo */
+  height: auto;
+  position: relative; /* Allow logo to sit on top of the bar */
+  z-index: 11; /* Keeps the logo above the bar */
+}
+
+
+
+.contactUsText {
+  font-size: 1.5em;
+  color: black;
+  margin-top: 20px;
+}
+
+/* Solid fade-cover to block anything under */
+
+
+/* Content below */
+.info-section {
+  background-image: url('background.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Cover entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  border: 3px solid black;
+  padding: 30px 0px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.info-section h1 {
+  font-size: 3.5em;
+  margin-bottom: 5px;
+}
+
+.info-section p {
+  font-size: 1.2em;
+  color: white;
+}
+
+
+.background-cover {
+  height: 200vh; /* Full screen height */
+  background-image: url('background.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Cover entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  position: relative;
+  z-index: 1; /* Ensure it's below any fixed elements if needed */
+}
+/* Video Section */
+.video-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  border: none;
+}
+
+/* Listen Button */
+.listen-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.listen-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.listen-button:hover {
+  background-color: #666;
+}
+
+/* Social Media Links */
+.social-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+.tour-button:hover {
+  transition: font-size 0.6s ease;
+}
+.tour-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, font-size 0.6s ease;
+}
+
+.tour-button:hover {
+  font-size: 2.2em;
+}
+
+.tour-button:not(:hover) {
+  font-size: 2em;
+  transition: font-size 0.6s ease;
+}
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-icons img {
+  width: 30px; /* Adjust the size as needed */
+  height: 30px; /* Maintain aspect ratio */
+}
+
+
+/* Privacy Policy */
+.privacy-policy {
+  font-size: 0.8em; /* Make the text smaller */
+  color: black; /* Subtle color for less emphasis */
+  text-align: center;
+  margin-top: 25px;
+  line-height: 1.4;
+  margin-top: 100px;
+
+  margin-bottom: 100px;
+}
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.listen-btn,
+.contact-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: black;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.listen-btn:hover,
+.contact-btn:hover {
+  background: #444;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #444;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
