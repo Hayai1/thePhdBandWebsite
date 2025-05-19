@@ -13,13 +13,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Hero Image (same as before) */
-.hero-wrapper {
-  position: relative;
-  height: 50vh;
-  overflow: hidden;
-}
-
 /* Hero Image */
 .hero-wrapper {
   position: relative;
@@ -53,8 +46,6 @@ body {
   position: relative; /* Allow logo to sit on top of the bar */
   z-index: 11; /* Keeps the logo above the bar */
 }
-
-
 
 .contactUsText {
   font-size: 1.5em;
@@ -101,19 +92,29 @@ body {
   z-index: 1; /* Ensure it's below any fixed elements if needed */
 }
 /* Video Section */
-.video-section {
-  width: 100%;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+.video-wrapper {
+  max-width: 800px; /* Adjust this width as needed */
+  margin: 0 auto;    /* Centers the video */
+  padding: 1rem;     /* Optional: some spacing on smaller screens */
 }
 
-iframe {
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
   width: 100%;
-  height: 400px;
-  max-width: 100%;
-  border: none;
 }
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 
 /* Listen Button */
 .listen-section {
