@@ -291,3 +291,23 @@ body {
 .close:hover {
   color: black;
 }
+
+@media (max-width: 800px) {
+  .info-section {
+    padding: 20px 0px;
+    transform: translateY(-10%);
+    transition: transform 0.3s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-section {
+    transform: translateY(-20%);
+  }
+}
+
+@media (max-width: 400px) {
+  .info-section {
+    transform: translateY(-30%);
+  }
+}
