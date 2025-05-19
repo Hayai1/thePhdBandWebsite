@@ -1,128 +1,292 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.band-photo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    img {
-        width: 30%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  color: white;
+  font-family: "Sabon LT Std";
 }
 
-/* Header */
-header {
-    background: #4CAF50;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+.overlay-content {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 470px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
+/* Hero Image (same as before) */
+.hero-wrapper {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
 }
 
-/* Navigation */
-nav {
-    background: #333;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
+/* Hero Image */
+.hero-wrapper {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1rem;
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* Wrapper for Logo and Bar */
+.logo-wrapper {
+  position: fixed; /* Keeps the logo and bar at the top */
+  top: 0px; /* Adjust this for spacing from the top */
+  text-align: center;
+  z-index: 10; /* Keeps the logo and bar on top */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  width: 100%; /* Ensures the bar goes across the full width */
+  background-color: #000000;
 }
 
-/* Main Content */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+/* Band Logo */
+.band-logo {
+  width: 400px; /* Resize logo */
+  height: auto;
+  position: relative; /* Allow logo to sit on top of the bar */
+  z-index: 11; /* Keeps the logo above the bar */
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+
+
+.contactUsText {
+  font-size: 1.5em;
+  color: black;
+  margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+/* Solid fade-cover to block anything under */
+
+
+/* Content below */
+.info-section {
+  background-image: url('background.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Cover entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  border: 3px solid black;
+  padding: 30px 0px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
-/* Buttons */
-button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+.info-section h1 {
+  font-size: 3.5em;
+  margin-bottom: 5px;
 }
 
-button:hover {
-    background: #45a049;
+.info-section p {
+  font-size: 1.2em;
+  color: white;
 }
 
-/* Forms */
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+.background-cover {
+  height: 200vh; /* Full screen height */
+  background-image: url('background.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Cover entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  position: relative;
+  z-index: 1; /* Ensure it's below any fixed elements if needed */
+}
+/* Video Section */
+.video-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-input:focus, textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
+iframe {
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  border: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 0.9rem;
-    }
+/* Listen Button */
+.listen-section {
+  text-align: center;
+  margin: 40px 0;
+}
 
-    nav {
-        flex-direction: column;
-    }
+.listen-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
-    nav a {
-        margin: 0.5rem 0;
-    }
+.listen-button:hover {
+  background-color: #666;
+}
+
+/* Social Media Links */
+.social-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+.tour-button:hover {
+  transition: font-size 0.6s ease;
+}
+.tour-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, font-size 0.6s ease;
+}
+
+.tour-button:hover {
+  font-size: 2.2em;
+}
+
+.tour-button:not(:hover) {
+  font-size: 2em;
+  transition: font-size 0.6s ease;
+}
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-icons img {
+  width: 30px; /* Adjust the size as needed */
+  height: 30px; /* Maintain aspect ratio */
+}
+
+
+/* Privacy Policy */
+.privacy-policy {
+  font-size: 0.8em; /* Make the text smaller */
+  color: black; /* Subtle color for less emphasis */
+  text-align: center;
+  margin-top: 25px;
+  line-height: 1.4;
+  margin-top: 100px;
+
+  margin-bottom: 100px;
+}
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.listen-btn,
+.contact-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: black;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.listen-btn:hover,
+.contact-btn:hover {
+  background: #444;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #444;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
 }
